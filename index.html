@@ -23,6 +23,7 @@
             justify-content: center;
             background-color: #333;
             padding: 10px 0;
+            flex-wrap: wrap; /* This allows navigation to stack on small screens */
         }
         nav a {
             color: #fff;
@@ -60,7 +61,7 @@
             display: flex;
             justify-content: space-around;
             margin-top: 40px;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /* To handle smaller screen sizes */
         }
         .feature-box {
             background-color: #fff;
@@ -88,8 +89,36 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            .feature-box {
+                width: 100%; /* Stack feature boxes vertically on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
-    
 </head>
 <body>
 
